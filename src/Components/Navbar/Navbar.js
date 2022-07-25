@@ -10,7 +10,6 @@ const viewport = {
 const Navbar = () => {
     const categories = [
         { name: "mujeres", id: 1, route: "/category/mujeres" },
-        { name: "jean", id: 1, route: "/category/jean" },
     ];
     return (
         <header style={styles.container}>

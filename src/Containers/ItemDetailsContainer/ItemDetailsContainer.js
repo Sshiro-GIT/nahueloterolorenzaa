@@ -25,7 +25,7 @@ export const ItemDetailsContainer = () => {
 
     return (
         <>
-            {loaded ? <CircularProgress/> : <ItemDetail product={product} />}
+            {loaded ? <CircularProgress /> : <ItemDetail product={product} />}
         </>
     )
 }
