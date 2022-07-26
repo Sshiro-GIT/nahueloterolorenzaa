@@ -4,15 +4,12 @@ import ItemCount from "../../Components/ItemCount/ItemCount";
 import { cartContext } from '../../Context/CartContext';
 
 const ItemDetail = ({ product }) => {
-
   const [buyFinalized, setBuyFinalized] = useState(false)
   const { addProduct } = useContext(cartContext);
-
   const onAdd = (count) => {
     addProduct({...product, qty: count});
     setBuyFinalized(true);
   }
-
 
   return (
     <div style={styles.infoContainer}>
@@ -23,7 +20,6 @@ const ItemDetail = ({ product }) => {
           <span>${product.price}</span>
           <p>{product.description}</p>
         </div>
-
         {buyFinalized
           ? <Link to="/cart">
             <button>Finalizar compra</button>

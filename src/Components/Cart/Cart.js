@@ -6,7 +6,6 @@ const Cart = () => {
   const {products, deleteProduct, clear, qtyProducts} = useContext(cartContext)
 
   return (
-    
       <div style={styles.div}>
         <h1> carrito de compras </h1>
         {products.map(product => <div key={product.id}>
@@ -14,9 +13,9 @@ const Cart = () => {
           <img src={product.image} style={styles.img}/>
           <p>{product.price}</p>
           <p>{qtyProducts * product.price}</p>
-          <button onClick={() => deleteProduct(product.id)}>holaa</button>
+          <button onClick={() => deleteProduct(product.id)}>eliminar producto</button>
         </div>)}
-        <button onClick={() => clear(products)}>limpiar</button> 
+        <button onClick={() => clear(products)}>limpiar carrito</button> 
       </div>
   )
 }

@@ -11,14 +11,13 @@ const Navbar = () => {
     const categories = [
         { name: "mujeres", id: 1, route: "/category/mujeres" },
     ];
+
     return (
         <header style={styles.container}>
-
             <div style={styles.branchContainer}>
                 <Link to="/"><img style={styles.logo} src={logo} alt="logo" /></Link>
                 <h1 style={styles.title}>showroom</h1>
             </div>
-
             <div style={styles.links}>
                 <nav>
                     {categories.map((category) => <NavLink key={category.id} style={styles.link} to={category.route}>{category.name}</NavLink>)}

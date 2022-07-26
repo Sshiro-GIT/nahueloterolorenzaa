@@ -9,7 +9,6 @@ export const ItemDetailsContainer = () => {
     const [product, setProduct] = useState([]);
     const [loaded, setLoaded] = useState(true)
     const { productId } = useParams();
-
     useEffect(() => {
         const productsCollection = collection(db, 'productos');
         const refDoc = doc(productsCollection, productId)
@@ -29,6 +28,5 @@ export const ItemDetailsContainer = () => {
         </>
     )
 }
-
 
 export default ItemDetailsContainer

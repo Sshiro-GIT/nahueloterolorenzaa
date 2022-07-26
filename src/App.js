@@ -4,7 +4,6 @@ import ItemListContainer from './Containers/ItemListContainer/ItemListContainer'
 import ItemDetailsContainer from './Containers/ItemDetailsContainer/ItemDetailsContainer'
 import Cart from './Components/Cart/Cart'
 import CartCustomProvider from './Context/CartContext'
-
 import {
   BrowserRouter,
   Routes,
@@ -25,8 +24,7 @@ const App = () => {
           </Routes>
         </CartCustomProvider>
       </BrowserRouter>
-  )
-}
+  )}
 
 export default App
 
