@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const ItemCount = ({ initial, onAdd, stock }) => {
     const [count, setCount] = useState(initial);
@@ -6,15 +6,15 @@ const ItemCount = ({ initial, onAdd, stock }) => {
         if (count < stock) {
             setCount(count + 1);
         }
-    }
+    };
     const handlerClickSubtrack = () => {
         if (count > 1) {
             setCount(count - 1);
         }
-    }
+    };
     const handlerClickAddToCart = () => {
         onAdd(count);
-    }
+    };
 
     return (
         <div style={styles.container}>
@@ -25,8 +25,8 @@ const ItemCount = ({ initial, onAdd, stock }) => {
             </div>
             <button style={styles.buttonAdd} onClick={() => handlerClickAddToCart()}>Agregar al carrito</button>
         </div>
-    );
-}
+    )
+};
 
 const styles = {
     container: {

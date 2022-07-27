@@ -9,7 +9,7 @@ const styles = {
     alignItems: "center",
     flexWrap: "wrap",
   }
-}
+};
 
 const ItemList = ({ products }) => {
   return (

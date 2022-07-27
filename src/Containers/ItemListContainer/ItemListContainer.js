@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 import { db } from "../../firebase/firebase";
-import { getDocs, collection, query, where } from "firebase/firestore"
+import { getDocs, collection, query, where } from "firebase/firestore";
 
 export const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([]);
@@ -19,8 +19,8 @@ export const ItemListContainer = ({ greeting }) => {
                 return {
                     id: doc.id,
                     ...doc.data(),
-                }
-            })
+                };
+            });
             setProducts(lista);
         })
         .catch(err => console.log(err))
@@ -32,7 +32,8 @@ return (
         <h1>{greeting}</h1>
         {loaded ? <CircularProgress/> : <ItemList products={products} />}
     </>
-)}
+    );
+};
 
 export default ItemListContainer
 

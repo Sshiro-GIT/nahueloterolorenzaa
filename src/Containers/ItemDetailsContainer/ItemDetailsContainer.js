@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
-import { db } from "../../firebase/firebase"
-import { doc, getDoc, collection } from "firebase/firestore"
+import { db } from "../../firebase/firebase";
+import { doc, getDoc, collection } from "firebase/firestore";
 
 export const ItemDetailsContainer = () => {
     const [product, setProduct] = useState([]);
@@ -26,7 +26,7 @@ export const ItemDetailsContainer = () => {
         <>
             {loaded ? <CircularProgress /> : <ItemDetail product={product} />}
         </>
-    )
-}
+    );
+};
 
 export default ItemDetailsContainer

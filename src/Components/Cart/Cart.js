@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { cartContext } from '../../Context/CartContext';
 
 const Cart = () => {
-  const {products, deleteProduct, clear, qtyProducts} = useContext(cartContext)
+  const {products, deleteProduct, clear, qtyProducts} = useContext(cartContext);
 
   return (
       <div style={styles.div}>
@@ -18,7 +18,8 @@ const Cart = () => {
         <button onClick={() => clear(products)}>limpiar carrito</button> 
       </div>
   )
-}
+};
+
 const styles = {
   img: {
     width: "40%"
@@ -28,7 +29,6 @@ const styles = {
     flexDirection: "row",
     alignItems: "center",
   }
-
-}
+};
 
 export default Cart

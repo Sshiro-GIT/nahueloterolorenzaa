@@ -6,10 +6,14 @@ import { Link, NavLink } from "react-router-dom";
 const viewport = {
     width: document.documentElement.clientWidth,
     height: document.documentElement.clientHeight
-}
+};
 const Navbar = () => {
     const categories = [
-        { name: "mujeres", id: 1, route: "/category/mujeres" },
+        { name: "remeras", id: 1, route: "/category/remeras" },
+        { name: "jean", id: 1, route: "/category/jean" },
+        { name: "polleras", id: 1, route: "/category/polleras" },
+        { name: "zapatos", id: 1, route: "/category/zapatos" },
+        { name: "vestidos", id: 1, route: "/category/vestidos" },
     ];
 
     return (
@@ -55,6 +59,5 @@ const styles = {
     logo: {
         height: 70
     },
-    
 };
 export default Navbar 

@@ -9,7 +9,7 @@ const ItemDetail = ({ product }) => {
   const onAdd = (count) => {
     addProduct({...product, qty: count});
     setBuyFinalized(true);
-  }
+  };
 
   return (
     <div style={styles.infoContainer}>

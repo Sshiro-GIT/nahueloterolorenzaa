@@ -15,7 +15,7 @@ const CartCustomProvider = ({ children }) => {
         getQtyProducts();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    , [products])
+    , [products]);
 
     const addProduct = (product) => {
         if (isInCart(product.id)) {
@@ -26,7 +26,7 @@ const CartCustomProvider = ({ children }) => {
             setProducts(aux)
         }else{
             setProducts([...products,product]);
-        };}
+        };};
     const deleteProduct = (id) => {
         setProducts(products.filter(product => product.id !== id));
     };
@@ -42,7 +42,8 @@ const CartCustomProvider = ({ children }) => {
         <Provider value={{ products, addProduct, deleteProduct, clear, qtyProducts }}>
             {children}
         </Provider>
-    )}
+    );
+};
 
 export default CartCustomProvider
 
