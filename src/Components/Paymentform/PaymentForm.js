@@ -39,14 +39,14 @@ const PaymentForm = () => {
       <h3>Ingresa tus datos</h3>
       <form onSubmit={finishBuy}>
         <label>Nombre</label>
-        <input onChange={createidVenta} type="text" name="nombre" className="form-control" required></input>
+        <input onChange={createidVenta} type="text" name="nombre" required></input>
         <label>Telefono</label>
-        <input onChange={createidVenta} type="number" name="telefono" className="form-control" required></input>
+        <input onChange={createidVenta} type="number" name="telefono" required></input>
         <label>Email</label>
-        <input onChange={createidVenta} type="email" name="email" className="form-control"></input>
+        <input onChange={createidVenta} type="email" name="email"></input>
         <label>Informacion Adicional</label>
-        <input onChange={createidVenta} type="message" name="notas" className="form-control"></input>
-        <button onClick={finishBuy} className="btn btn-success" type="submit">
+        <input onChange={createidVenta} type="message" name="notas"></input>
+        <button onClick={finishBuy} type="submit">
           Enviar datos de compra
         </button>
       </form>
