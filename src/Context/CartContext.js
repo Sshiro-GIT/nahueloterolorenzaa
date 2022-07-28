@@ -1,8 +1,8 @@
 import React, { createContext, useState, useEffect } from 'react'
-export const cartContext = createContext();
 
-const { Provider } = cartContext;
-const CartCustomProvider = ({ children }) => {
+export const cartContext = createContext();
+	const { Provider } = cartContext;
+	const CartCustomProvider = ({ children }) => {
 	const [products, setProducts] = useState([]);
 	const [qtyProducts, setQtyProducts] = useState(0);
 	const getQtyProducts = () => {
@@ -29,7 +29,6 @@ const CartCustomProvider = ({ children }) => {
 		};};
 	const deleteProduct = (id) => {
 		setProducts(products.filter(product => product.id !== id))
-		
 	};
 	const isInCart = (id) => {
 		return products.some(products => products.id === id);

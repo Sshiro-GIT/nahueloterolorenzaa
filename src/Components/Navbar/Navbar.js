@@ -33,11 +33,6 @@ return (
               </NavLink>)
             }
           </nav>
-          <Link to="/signin">
-            <Button variant="contained" color="secondary">
-              Sign In
-            </Button>
-          </Link>
           <Link to="/cart"><CartWidget /></Link>
       </Stack>
     </div>

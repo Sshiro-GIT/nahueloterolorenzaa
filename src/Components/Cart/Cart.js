@@ -27,6 +27,7 @@ const Cart = () => {
           </div>
         </div>)}
         <div>
+        <p>${products.reduce((acc, el) => acc + (el.qty * el.price), 0)}</p>
           <Stack spacing={2} direction="row">
             <Button variant="contained" color="secondary" onClick={() => clear(products)}>limpiar carrito</Button>
             <Link to="/paymentform">

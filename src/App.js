@@ -5,9 +5,7 @@ import ItemDetailsContainer from './Containers/ItemDetailsContainer/ItemDetailsC
 import Cart from './Components/Cart/Cart';
 import PaymentForm from './Components/Paymentform/PaymentForm';
 import CartCustomProvider from './Context/CartContext';
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-import SignIn from "./Components/SignIn/SignIn";
-import SignUp from "./Components/SignUp/SignUp";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 const App = () => {
   return (
@@ -20,8 +18,6 @@ const App = () => {
             <Route path="/product/:productId" element={<ItemDetailsContainer />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/paymentform" element={<PaymentForm />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </CartCustomProvider>
       </BrowserRouter>

@@ -1,36 +1,55 @@
-import React, { useState } from 'react';
-import { db } from '../../firebase/firebase';
-import { collection, addDoc, serverTimestamp, doc, updateDoc } from 'firebase/firestore';
-
-
+import React, { useContext, useState } from "react";
+import { db } from "../../firebase/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { cartContext } from '../../Context/CartContext';
 
 const PaymentForm = () => {
-  const [idVenta, setIdVenta] = useState("");
-
-  const datosComprador = {
-    nombre: 'nahuel',
-    apellido: 'otero',
-    email: 'nahuelotero@gmail.com',
-  };
-
-  const finalizarCompra = () => {
-    const ventasCollection = collection(db, 'ventas');
-    addDoc(ventasCollection, {
-      datosComprador,
-      items: [{ nombre: "remera",id:1 }, { nombre: "zapato",id:2 }],
-      date: serverTimestamp(),
-      total: 500
+  const { products, qtyProducts } = useContext(cartContext);
+  const [idVenta, setidVenta] = useState({
+    nombre:'',
+    telefono:'',
+    email:'',
+    notas:'',
     })
-    .then((result) =>{
-      setIdVenta(result.id)
-    });
-    const updateCollection = doc(db, "productos","title");
-    updateDoc(updateCollection,{stock:1});
+  const createidVenta = ({target}) => {
+    setidVenta({
+      ...idVenta,
+      [target.name] : target.value
+    })
   };
-
+  const finishBuy = () => {
+    const ventasCollection = collection(db, 'ventas');
+    addDoc(ventasCollection,{
+      idVenta,
+      items: products,
+      date: serverTimestamp(),
+      cantidad: qtyProducts,
+      total: total,
+    })
+    .then((result) => {
+      setidVenta(result.id)
+    })
+  };
+  let total = 0;
+  for(let i = 0; i < products.length; i++){
+    total += products[i].price * products[i].qty;
+  };
   return (
     <>
-      <button onClick={finalizarCompra}>Concretar Compra</button>
+      <h3>Ingresa tus datos</h3>
+      <form onSubmit={finishBuy}>
+        <label>Nombre</label>
+        <input onChange={createidVenta} type="text" name="nombre" className="form-control" required></input>
+        <label>Telefono</label>
+        <input onChange={createidVenta} type="number" name="telefono" className="form-control" required></input>
+        <label>Email</label>
+        <input onChange={createidVenta} type="email" name="email" className="form-control"></input>
+        <label>Informacion Adicional</label>
+        <input onChange={createidVenta} type="message" name="notas" className="form-control"></input>
+        <button onClick={finishBuy} className="btn btn-success" type="submit">
+          Enviar datos de compra
+        </button>
+      </form>
     </>
   );
 };
