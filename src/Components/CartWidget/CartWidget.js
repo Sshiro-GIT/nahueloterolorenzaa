@@ -1,15 +1,20 @@
 import React, { useContext } from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { cartContext } from '../../Context/CartContext';
+import IconButton from '@mui/material/IconButton';
+import { Badge } from '@mui/material';
 
 const CartWidget = () => {
 const { qtyProducts } = useContext(cartContext);
   
   return (
     <>
-      <div style={styles}>
-        <ShoppingCartIcon fontSize="large" />
-        <p>{qtyProducts}</p>
+      <div style={styles} >
+        <IconButton aria-label="show cart items" color="inherit" >
+          <Badge badgeContent={qtyProducts} color="secondary">
+            <ShoppingCartIcon fontSize="large" color="secondary"/>
+          </Badge>
+        </IconButton>
       </div>
     </>
   )

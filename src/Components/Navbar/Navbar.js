@@ -2,6 +2,8 @@ import React from "react";
 import logo from "../../assets/logoTienda.jpg"
 import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink } from "react-router-dom";
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 const viewport = {
   width: document.documentElement.clientWidth,
@@ -22,11 +24,22 @@ return (
       <Link to="/"><img style={styles.logo} src={logo} alt="logo" /></Link>
       <h1 style={styles.title}>showroom</h1>
     </div>
-      <div style={styles.links}>
-        <nav>
-          {categories.map((category) => <NavLink key={category.id} style={styles.link} to={category.route}>{category.name}</NavLink>)}
-        </nav>
-        <Link to="/cart"><CartWidget /></Link>
+      <div>
+        <Stack spacing={2} direction="row">
+          <nav style={styles.link}>
+            {categories.map((category) => 
+              <NavLink key={category.id} to={category.route}>
+                <Button variant="contained" color="secondary">{category.name}</Button>
+              </NavLink>)
+            }
+          </nav>
+          <Link to="/signin">
+            <Button variant="contained" color="secondary">
+              Sign In
+            </Button>
+          </Link>
+          <Link to="/cart"><CartWidget /></Link>
+      </Stack>
     </div>
   </header >
 )
@@ -49,15 +62,11 @@ const styles = {
     fontSize: 25,
     padding: 10
   },
-  links: {
-    display: "flex"
-  },
-  link: {
-    fontSize: 25,
-    padding: 20
-  },
   logo: {
-    height: 70
+    height: 75
   },
+  link:{
+    
+  }
 };
 export default Navbar 

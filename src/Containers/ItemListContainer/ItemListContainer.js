@@ -30,7 +30,7 @@ export const ItemListContainer = ({ greeting }) => {
 return (
   <>
     <h1>{greeting}</h1>
-    {loaded ? <CircularProgress/> : <ItemList products={products} />}
+    {loaded ? <CircularProgress color="secondary"/> : <ItemList products={products} />}
   </>
 );
 };

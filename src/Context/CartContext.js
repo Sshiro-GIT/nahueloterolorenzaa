@@ -28,7 +28,8 @@ const CartCustomProvider = ({ children }) => {
 			setProducts([...products,product]);
 		};};
 	const deleteProduct = (id) => {
-		setProducts(products.filter(product => product.id !== id));
+		setProducts(products.filter(product => product.id !== id))
+		
 	};
 	const isInCart = (id) => {
 		return products.some(products => products.id === id);

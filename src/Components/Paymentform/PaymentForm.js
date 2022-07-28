@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { db } from '../../firebase/firebase';
 import { collection, addDoc, serverTimestamp, doc, updateDoc } from 'firebase/firestore';
 
+
+
 const PaymentForm = () => {
   const [idVenta, setIdVenta] = useState("");
 
