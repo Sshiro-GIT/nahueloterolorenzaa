@@ -11,7 +11,7 @@ const App = () => {
   return (
       <BrowserRouter>
         <CartCustomProvider >
-          <Navbar />
+          <Navbar/>
           <Routes>
             <Route path="/" element={<ItemListContainer greeting='Bienvenido' />} />
             <Route path="/category/:categoryId" element={<ItemListContainer greeting='Bienvenido' />} />

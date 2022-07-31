@@ -9,6 +9,7 @@ const viewport = {
   width: document.documentElement.clientWidth,
   height: document.documentElement.clientHeight
 };
+
 const Navbar = () => {
   const categories = [
     { name: "remeras", id: 1, route: "/category/remeras" },
@@ -16,7 +17,7 @@ const Navbar = () => {
     { name: "polleras", id: 1, route: "/category/polleras" },
     { name: "zapatos", id: 1, route: "/category/zapatos" },
     { name: "vestidos", id: 1, route: "/category/vestidos" },
-    ];
+  ];
 
 return (
   <header style={styles.container}>
@@ -24,20 +25,20 @@ return (
       <Link to="/"><img style={styles.logo} src={logo} alt="logo" /></Link>
       <h1 style={styles.title}>showroom</h1>
     </div>
-      <div>
-        <Stack spacing={2} direction="row">
-          <nav style={styles.link}>
-            {categories.map((category) => 
-              <NavLink key={category.id} to={category.route}>
-                <Button variant="contained" color="secondary">{category.name}</Button>
-              </NavLink>)
-            }
-          </nav>
-          <Link to="/cart"><CartWidget /></Link>
+    <div>
+      <Stack spacing={2} direction="row">
+        <nav style={styles.link}>
+          {categories.map((category) => 
+            <NavLink key={category.id} to={category.route}>
+              <Button variant="contained" color="secondary">{category.name}</Button>
+            </NavLink>)
+          }
+        </nav>
+        <Link to="/cart"><CartWidget /></Link>
       </Stack>
     </div>
   </header >
-)
+);
 };
 
 const styles = {
@@ -62,6 +63,7 @@ const styles = {
   },
   link:{
     
-  }
+  },
 };
+
 export default Navbar 

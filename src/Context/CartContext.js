@@ -16,7 +16,7 @@ export const cartContext = createContext();
 	}
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	, [products]);
-
+	
 	const addProduct = (product) => {
 		if (isInCart(product.id)) {
 			const found = products.find(p =>p.id === product.id);

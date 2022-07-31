@@ -37,7 +37,7 @@ const Cart = () => {
         </div>
       </div>}
     </>
-  )
+  );
 };
 
 const styles = {
@@ -53,7 +53,7 @@ const styles = {
     display:"flex",
     textAlign:"center",
     justifyContent:"center"
-  }
+  },
 };
 
 export default Cart

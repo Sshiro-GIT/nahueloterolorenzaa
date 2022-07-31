@@ -6,20 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const styles = {
-  container: {
-    width: window.innerHeight > 900 ? "25%" : "90%",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: 20,
-  },
-  title: {
-    textOverflow: "ellipsis",
-    overflow: "hidden",
-    height: 100,
-  }
-};
+
 
 const Item = ({ product }) => {
   return (
@@ -54,6 +41,21 @@ const Item = ({ product }) => {
       </CardActions>
     </Card>
   );
+};
+
+const styles = {
+  container: {
+    width: window.innerHeight > 900 ? "25%" : "90%",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 20,
+  },
+  title: {
+    textOverflow: "ellipsis",
+    overflow: "hidden",
+    height: 100,
+  },
 };
 
 export default Item;
