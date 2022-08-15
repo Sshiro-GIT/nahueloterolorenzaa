@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { db } from "../../firebase/firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp} from "firebase/firestore";
 import { cartContext } from '../../Context/CartContext';
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
@@ -11,12 +11,11 @@ const PaymentForm = () => {
     nombre:'',
     telefono:'',
     email:'',
-    notas:'',
     })
   const createidVenta = ({target}) => {
     setidVenta({
       ...idVenta,
-      [target.name] : target.value
+      [target.name] : [target.value]
     })
   };
   const finishBuy = () => {
@@ -59,11 +58,8 @@ const PaymentForm = () => {
           <div style={styles.div}>
             <input onChange={createidVenta} type="email" name="email" style={styles.input}></input>
           </div>
-          <div style={styles.div}>
-            <label style={styles.label}>Informacion adicional :</label>
-          </div>
-          <div style={styles.div}>
-            <input onChange={createidVenta} type="message" name="notas" style={styles.input}></input>
+          <div>
+          <p style={styles.num1}>Total a pagar: ${products.reduce((acc, el) => acc + (el.qty * el.price), 0)}</p>
           </div>
           <div style={styles.div}>
             <Link to="/">
@@ -81,6 +77,12 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     margin: "5px",
+  },
+  num1:{
+    fontSize:"30px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   input:{
     color: "black",

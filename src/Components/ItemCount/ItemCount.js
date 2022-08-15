@@ -15,7 +15,7 @@ const ItemCount = ({ initial, onAdd, stock }) => {
     const handlerClickAddToCart = () => {
       onAdd(count);
     };
-
+    
 return (
   <div style={styles.container}>
     <div style={styles.containerButtons}>

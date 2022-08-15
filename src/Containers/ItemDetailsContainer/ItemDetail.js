@@ -10,15 +10,15 @@ const ItemDetail = ({ product }) => {
     addProduct({...product, qty: count});
     setBuyFinalized(true);
   };
-
+  
   return (
     <div style={styles.infoContainer}>
       <img style={styles.img} src={product.image} alt={product.title} />
       <div style={styles.infoTextContainer}>
         <div style={styles.infoText}>
           <h1>{product.title}</h1>
-          <span>${product.price}</span>
           <p>{product.description}</p>
+          <span style={styles.span}>${product.price}</span>
         </div>
         {buyFinalized
           ? <Link to="/cart">
@@ -38,11 +38,15 @@ const styles = {
     alignItems: "center"
   },
   img: {
+    padding: "20px",
     width: "25%"
   },
   infoTextContainer: {
     display: "flex",
     flexDirection: "column",
+  },
+  span:{
+    fontSize: "30px"
   },
   infoText: {
     padding: "10px",

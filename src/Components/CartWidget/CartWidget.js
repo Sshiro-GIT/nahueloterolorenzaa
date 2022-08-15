@@ -6,7 +6,7 @@ import { Badge } from '@mui/material';
 
 const CartWidget = () => {
 const { qtyProducts } = useContext(cartContext);
-  
+
   return (
     <>
       <div style={styles} >

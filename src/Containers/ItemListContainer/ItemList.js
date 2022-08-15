@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item";
 
 const ItemList = ({ products }) => {
-
+  
   return (
     <div style={styles.container}>
       {products.map((product) => (

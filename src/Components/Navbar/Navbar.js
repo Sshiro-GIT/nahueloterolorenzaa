@@ -18,7 +18,7 @@ const Navbar = () => {
     { name: "zapatos", id: 1, route: "/category/zapatos" },
     { name: "vestidos", id: 1, route: "/category/vestidos" },
   ];
-
+  
 return (
   <header style={styles.container}>
     <div style={styles.branchContainer}>

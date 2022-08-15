@@ -21,7 +21,7 @@ export const ItemDetailsContainer = () => {
       .catch(err => console.log(err))
       .finally(() => setLoaded(false))
   }, [productId]);
-
+  
 return (
   <>
     {loaded ? <CircularProgress /> : <ItemDetail product={product} />}

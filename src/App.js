@@ -13,11 +13,11 @@ const App = () => {
         <CartCustomProvider >
           <Navbar/>
           <Routes>
-            <Route path="/" element={<ItemListContainer greeting='Bienvenido' />} />
-            <Route path="/category/:categoryId" element={<ItemListContainer greeting='Bienvenido' />} />
-            <Route path="/product/:productId" element={<ItemDetailsContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/paymentform" element={<PaymentForm />} />
+            <Route path="/" element={<ItemListContainer/>} />
+            <Route path="/category/:categoryId" element={<ItemListContainer/>} />
+            <Route path="/product/:productId" element={<ItemDetailsContainer/>} />
+            <Route path="/cart" element={<Cart/>} />
+            <Route path="/paymentform" element={<PaymentForm/>} />
           </Routes>
         </CartCustomProvider>
       </BrowserRouter>
