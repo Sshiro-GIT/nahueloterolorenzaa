@@ -22,4 +22,4 @@ Quiero hacer un e-commerce que en un futuro se sirva a mi mama, ya que Lorenza e
 
 ## Autor ✒️
 
-*Nahuel Otero
+* ** Nahuel Otero
