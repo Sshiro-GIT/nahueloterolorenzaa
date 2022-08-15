@@ -28,9 +28,9 @@ return (
     <div>
       <Stack spacing={2} direction="row">
         <nav style={styles.link}>
-          {categories.map((category) => 
-            <NavLink key={category.id} to={category.route}>
-              <Button variant="contained" color="secondary">{category.name}</Button>
+          {categories.map((categories) => 
+            <NavLink key={categories.id} to={categories.route}>
+              <Button variant="contained" color="secondary">{categories.name}</Button>
             </NavLink>)
           }
         </nav>

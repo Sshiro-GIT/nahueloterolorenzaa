@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 import ItemListContainer from './Containers/ItemListContainer/ItemListContainer';
 import ItemDetailsContainer from './Containers/ItemDetailsContainer/ItemDetailsContainer';
 import Cart from './Components/Cart/Cart';
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/paymentform" element={<PaymentForm/>} />
           </Routes>
         </CartCustomProvider>
+        <Footer />
       </BrowserRouter>
   );
 };
