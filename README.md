@@ -1,13 +1,21 @@
-# Proyecto Nahuel Diego Otero 
+# Lorenza Showroom
 
-Este es un proyecto de un eCommerce realizado en react js el que estoy haciendo una pag para venta de ropa.
+_Lorenza Showroom es un e-commerce orientado a ventas de ropa para mujeres.
 
-## Herramientas utilizadas:
+### Como ejecutarlo 📋
+
 ```
-HTML5
-CSS
-Javascript
-firebase
-react JS
-Material UI
+*A traves de Node JS, se ejecuta mediante "npm install".
+*Una vez instalado, debes iniciar el servidor mediante "npm start" desde la carpeta del proyecto.
 ```
+
+## Construido con :
+
+* [HTML]
+* [React JS]
+* [Material UI]
+* [JavaScript]
+
+## Autor ✒️
+
+* ** Nahuel Otero
