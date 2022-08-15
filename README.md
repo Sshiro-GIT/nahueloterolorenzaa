@@ -1,6 +1,10 @@
 # Lorenza Showroom
 
-_Lorenza Showroom es un e-commerce orientado a ventas de ropa para mujeres.
+Lorenza Showroom es un e-commerce orientado a ventas de ropa para mujeres.
+
+## Por que eleji este proyecto: 
+
+Quiero hacer un e-commerce que en un futuro se sirva a mi mama, ya que Lorenza es el showroom que tiene mi mama en mar del plata y cuando termine de curzar programacion backend en coder me gustaria tener el e-commerce para que pueda usarlo.
 
 ### Como ejecutarlo 📋
 
